@@ -99,8 +99,6 @@ php artisan serve
 We welcome contributions! Please fork the repository and submit a pull request with a detailed explanation of your changes.
 
 
-
-
 ### License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
