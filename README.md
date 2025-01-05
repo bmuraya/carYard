@@ -51,8 +51,8 @@ Ensure the following are installed on your system:
 ### Setup Instructions
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/buy-sell-vehicles.git
-   cd buy-sell-vehicles
+   git clone https://github.com/your-username/CarYard.git
+   cd CarYard
 
 ### Install Dependencies: Install PHP and Node.js dependencies
 
