@@ -52,3 +52,59 @@ Ensure the following are installed on your system:
    ```bash
    git clone https://github.com/your-username/buy-sell-vehicles.git
    cd buy-sell-vehicles
+
+### Install Dependencies: Install PHP and Node.js dependencies
+
+  ```bash
+composer install
+npm install && npm run dev
+ ``` 
+
+### Set Up Environment:
+
+Duplicate the .env.example file and rename it to .env.
+Update database credentials, mail settings, and other environment-specific details.
+
+
+### Run Migrations: Migrate the database to create required tables:
+
+ ```bash
+Copy code
+php artisan migrate
+ ``` 
+
+
+### Seed the Database (Optional): Populate the database with sample data for testing:
+
+ ```bash
+Copy code
+php artisan db:seed
+ ``` 
+
+### Serve the Application: Start the Laravel development server:
+
+ ```bash
+Copy code
+php artisan serve
+ ```
+
+### Usage
+    - Open a browser and visit http://127.0.0.1:8000.
+    - Register as a buyer or seller.
+    - Browse or post vehicle listings easily.
+
+
+###Contributing
+We welcome contributions! Please fork the repository and submit a pull request with a detailed explanation of your changes.
+
+
+
+
+### License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+### Contact
+For questions or support, feel free to contact the project maintainer at babumuraya@gmail.com
+
+
+
