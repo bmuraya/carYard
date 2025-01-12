@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Car;
+use App\Models\Maker;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 
@@ -115,7 +117,23 @@ class HomeController extends Controller
       //       ->delete();
 
 
-      Car::truncate();
+      // Car::truncate();
+
+
+      // $car = Car::find(1);
+
+      // dd($car->favouriteUsers);
+
+      // $user = User::find(1);
+
+      // dd($user->favouriteCars);
+
+
+        $maker = Maker::factory()->create();
+
+        dd($maker);
+
+      return view('home.index');
 
       
        return  View::make('home.index');
