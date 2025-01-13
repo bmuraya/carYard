@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\County;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,6 +19,7 @@ class ConstituencyFactory extends Factory
     {
         return [
             'name' => fake()->city(),
+            'county_id' => County::factory()
         ];
     }
 }

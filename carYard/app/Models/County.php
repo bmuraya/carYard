@@ -12,6 +12,8 @@ class County extends Model
 
     public $timestamps = false;
 
+    protected $table = 'county';
+
     protected $fillable = [
         'name'
     ];
