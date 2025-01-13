@@ -27,7 +27,7 @@
 
 <body @if($bodyClass)class="{{$bodyClass}}"@endif>
     
-
+    
 
   {{$slot}}
 

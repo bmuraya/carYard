@@ -24,7 +24,7 @@ class Car extends Model
         'car_type_id',
         'fuel_type_id',
         'user_id',
-        'constituency_id',
+        'constituencies_id',
         'address',
         'phone',
         'description',
@@ -52,7 +52,7 @@ class Car extends Model
 
     public function model(): BelongsTo
     {
-        return $this->belongsTo(Model::class);
+        return $this->belongsTo(CarModel::class);
     }
 
 
@@ -62,9 +62,9 @@ class Car extends Model
     }
 
 
-    public function constituency(): BelongsTo
+    public function constituencies(): BelongsTo
     {
-        return $this->belongsTo(Constituency::class);
+        return $this->belongsTo(Constituencies::class);
     }
 
 

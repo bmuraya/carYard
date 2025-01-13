@@ -44,7 +44,7 @@ class HomeController extends Controller
       // $car ->car_type_id= 1;   
       // $car ->fuel_type_id= 1;   
       // $car ->user_id= 1;   
-      // $car ->constituency_id= 1;   
+      // $car ->constituencies_id= 1;   
       // $car ->address= "kedong house valley road";   
       // $car ->phone= "+254710585296";   
       // $car ->description= null;   
@@ -62,7 +62,7 @@ class HomeController extends Controller
       //       'car_type_id' => 1,   
       //       'fuel_type_id' => 1,   
       //       'user_id' => 1,   
-      //       'constituency_id' => 1,   
+      //       'constituencies_id' => 1,   
       //       'address' => "kedong house valley road",   
       //       'phone' => "+254710585296",   
       //       'description' => null,   
@@ -129,9 +129,14 @@ class HomeController extends Controller
       // dd($user->favouriteCars);
 
 
-        $maker = Maker::factory()->create();
+      //   $maker = Maker::factory()->create();
 
-        dd($maker);
+      //   dd($maker);
+
+      User::factory()->count(10)->create();
+
+
+
 
       return view('home.index');
 

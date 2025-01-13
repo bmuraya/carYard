@@ -1596,7 +1596,7 @@
     <table id="558" parent="191" name="car_image"/>
     <table id="559" parent="191" name="car_types"/>
     <table id="560" parent="191" name="cars"/>
-    <table id="561" parent="191" name="constituency"/>
+    <table id="561" parent="191" name="constituencies"/>
     <table id="562" parent="191" name="county"/>
     <table id="563" parent="191" name="failed_jobs"/>
     <table id="564" parent="191" name="favourite_cars"/>
@@ -1842,7 +1842,7 @@
       <Position>10</Position>
       <StoredType>integer|0s</StoredType>
     </column>
-    <column id="619" parent="560" name="constituency_id">
+    <column id="619" parent="560" name="constituencies_id">
       <NotNull>1</NotNull>
       <Position>11</Position>
       <StoredType>integer|0s</StoredType>
@@ -1904,9 +1904,9 @@
       <RefTableName>users</RefTableName>
     </foreign-key>
     <foreign-key id="632" parent="560">
-      <ColNames>constituency_id</ColNames>
+      <ColNames>constituencies_id</ColNames>
       <RefColNames>id</RefColNames>
-      <RefTableName>constituency</RefTableName>
+      <RefTableName>constituencies</RefTableName>
     </foreign-key>
     <key id="633" parent="560">
       <ColNames>id</ColNames>

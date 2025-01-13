@@ -6,9 +6,9 @@ use App\Models\County;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Constituency>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\constituencies>
  */
-class ConstituencyFactory extends Factory
+class ConstituenciesFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,8 +18,8 @@ class ConstituencyFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->city(),
-            'county_id' => County::factory()
+           'name' => fake()->word(),
+        
         ];
     }
 }

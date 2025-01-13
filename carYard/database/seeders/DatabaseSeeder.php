@@ -3,8 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\Car;
+use App\Models\CarImage;
+use App\Models\CarModel;
 use App\Models\CarType;
-use App\Models\Constituency;
+use App\Models\Constituencies;
 use App\Models\County;
 use App\Models\FuelType;
 use App\Models\Maker;
@@ -67,13 +69,13 @@ class DatabaseSeeder extends Seeder
                     'Bungoma' => ['Kanduyi', 'Bumula', 'Kimilili', 'Sirisia', 'Tongaren', 'Webuye East']
                 ];
 
-                foreach ($county as $countyName => $cities) {
+                foreach ($county as $countyName => $Constituencies) {
                     County::factory()
                         ->state(['name' => $countyName])
                         ->has(
-                            Constituency::factory()
-                                ->count(count($cities))
-                                ->sequence(...array_map(fn($city) => ['name' => $city], $cities))
+                            Constituencies::factory()
+                                ->count(count($Constituencies))
+                                ->sequence(...array_map(fn($city) => ['name' => $city], $Constituencies))
                         )
                         ->create();
                 }
@@ -95,7 +97,7 @@ class DatabaseSeeder extends Seeder
                 Maker::factory()
                     ->state(['name'=> $maker])
                     ->has(
-                        Model::factory()
+                        CarModel::factory()
                         ->count(count($models))
                         ->sequence(...array_map(fn($model)=>['name'=> $model], $models))
                     )
