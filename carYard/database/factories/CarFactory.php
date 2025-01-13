@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\CarModel;
+use App\Models\Model as EloquentModel;
 use App\Models\CarType;
 use App\Models\Constituencies;
 use App\Models\FuelType;
@@ -27,7 +27,7 @@ class CarFactory extends Factory
         return [
            'maker_id' => Maker::inRandomOrder()->first()->id,
            'model_id' => function (array $attributes) {
-           return  CarModel::where('maker_id', $attributes['maker_id'])->inRandomOrder()->first()->id;
+           return  Model::where('maker_id', $attributes['maker_id'])->inRandomOrder()->first()->id;
            },
             'year' =>fake()->year(),
             'price' =>((int)fake()->randomFloat(2, 5, 100)) * 1000,
@@ -36,7 +36,7 @@ class CarFactory extends Factory
             'car_type_id' => CarType::inRandomOrder()->first()->id,
             'fuel_type_id' => FuelType::inRandomOrder()->first()->id,
             'user_id' => User::inRandomOrder()->first()->id,
-            'constituencies' => Constituencies::inRandomOrder()->first()->id,
+            'constituencies_id' => Constituencies::inRandomOrder()->first()->id,
             'address' => fake()->address(),
             'phone' => function (array $attributes) {
                 return User::find($attributes['user_id'])->phone;

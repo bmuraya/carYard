@@ -6,22 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="01853ee1-f753-4a55-a880-792da5b1b668" name="Changes" comment="test">
       <changelist_data name="b" email="" automatic="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5e7121ab-544e-43cb-b5e9-45d3e3364996.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5e7121ab-544e-43cb-b5e9-45d3e3364996.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carYard/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/carYard/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carYard/app/Models/Car.php" beforeDir="false" afterPath="$PROJECT_DIR$/carYard/app/Models/Car.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carYard/app/Models/constituencies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/carYard/app/Models/County.php" beforeDir="false" afterPath="$PROJECT_DIR$/carYard/app/Models/County.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carYard/app/Models/FuelType.php" beforeDir="false" afterPath="$PROJECT_DIR$/carYard/app/Models/FuelType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carYard/app/Models/CarImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/carYard/app/Models/CarImage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carYard/app/Models/CarModel.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/carYard/app/Models/Maker.php" beforeDir="false" afterPath="$PROJECT_DIR$/carYard/app/Models/Maker.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carYard/app/Models/Model.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/carYard/database/factories/CarFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/carYard/database/factories/CarFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carYard/database/factories/constituenciesFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/carYard/database/factories/ModelFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/carYard/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/carYard/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carYard/database/factories/CarImageFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/carYard/database/factories/CarImageFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carYard/database/factories/CarModelFactory.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/carYard/database/migrations/2025_01_12_073506_create_models_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/carYard/database/migrations/2025_01_12_073506_create_models_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carYard/database/migrations/2025_01_12_073657_create_constituencies_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/carYard/database/migrations/2025_01_12_080716_create_car_image_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/carYard/database/migrations/2025_01_12_080716_create_car_image_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carYard/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/carYard/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carYard/resources/views/layouts/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/carYard/resources/views/layouts/base.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +221,7 @@
       <workItem from="1736081409806" duration="3371000" />
       <workItem from="1736675289962" duration="74000" />
       <workItem from="1736676217273" duration="6824000" />
-      <workItem from="1736787529120" duration="730000" />
+      <workItem from="1736787529120" duration="6759000" />
     </task>
     <servers />
   </component>

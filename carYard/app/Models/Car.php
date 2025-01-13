@@ -24,7 +24,7 @@ class Car extends Model
         'car_type_id',
         'fuel_type_id',
         'user_id',
-        'constituencies_id',
+        'constituency_id',
         'address',
         'phone',
         'description',
@@ -52,7 +52,7 @@ class Car extends Model
 
     public function model(): BelongsTo
     {
-        return $this->belongsTo(CarModel::class);
+        return $this->belongsTo(Model::class);
     }
 
 
@@ -62,25 +62,25 @@ class Car extends Model
     }
 
 
-    public function constituencies(): BelongsTo
+    public function constituency(): BelongsTo
     {
         return $this->belongsTo(Constituencies::class);
     }
 
 
 
-    public function features():HasOne
+    public function features(): HasOne
     {
         return $this->hasOne(CarFeatures::class);
     }
 
 
-    public function primaryImage():HasOne
+    public function primaryImage(): HasOne
     {
         return $this->hasOne(CarImage::class)->oldestOfMany('position');
     }  
 
-    public function image():HasMany
+    public function  images(): HasMany
     {
         return $this->hasMany(CarImage::class);
     }  

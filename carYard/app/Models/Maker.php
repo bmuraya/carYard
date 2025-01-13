@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model as EloquentModel; // Alias the base Eloqu
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use App\Models\Car;
-use App\Models\CarModel; 
+
 
 class Maker extends EloquentModel
 {
@@ -18,13 +18,15 @@ class Maker extends EloquentModel
         'name',
     ];
 
+    
+
     public function cars(): HasMany
     {
         return $this->hasMany(Car::class);
     }
 
-    public function CarModels(): HasMany // Rename the method
+    public function Models(): HasMany // Rename the method
     {
-        return $this->hasMany(CarModel::class); // Use a renamed class
+        return $this->hasMany(Model::class); // Use a renamed class
     }
 }

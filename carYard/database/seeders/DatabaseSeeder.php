@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Car;
 use App\Models\CarImage;
-use App\Models\CarModel;
+use App\Models\Model as EloquentModel;
 use App\Models\CarType;
 use App\Models\Constituencies;
 use App\Models\County;
@@ -97,7 +97,7 @@ class DatabaseSeeder extends Seeder
                 Maker::factory()
                     ->state(['name'=> $maker])
                     ->has(
-                        CarModel::factory()
+                        Model::factory()
                         ->count(count($models))
                         ->sequence(...array_map(fn($model)=>['name'=> $model], $models))
                     )
@@ -121,22 +121,15 @@ class DatabaseSeeder extends Seeder
               Car::factory()
               ->count(50)
               ->has(
-                CarImage:: factory()
+                CarImage::factory()
                 ->count(5)
-                ->sequence(fn(Sequence $sequence)=>
-                 ['position' =>$sequence->index + 1])
-
+                ->sequence(fn(Sequence $sequence)=>['position' =>$sequence->index + 1]),'images'
               )
               ->hasFeatures(),      
                'favouriteCars'
         )  
             ->create();
-          
-
-
-
-
-
+        
 
     }
 }
