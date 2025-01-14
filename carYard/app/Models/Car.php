@@ -24,7 +24,7 @@ class Car extends Model
         'car_type_id',
         'fuel_type_id',
         'user_id',
-        'constituency_id',
+        'Constituencies_id',
         'address',
         'phone',
         'description',

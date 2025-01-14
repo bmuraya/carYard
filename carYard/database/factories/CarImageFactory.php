@@ -18,7 +18,7 @@ class CarImageFactory extends Factory
     public function definition(): array
     {
         return [
-           ' car_id' => Car::factory(),
+            'car_id' => Car::factory(),
             'image_path' => fake()->imageUrl(),
             'position' => function(array $attributes)
              {
