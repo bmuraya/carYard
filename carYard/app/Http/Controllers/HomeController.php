@@ -12,8 +12,21 @@ class HomeController extends Controller
 {
      public function index()
      {  
-       
-      // // Select all Cars
+      $cars = Car::where('published_at', '<', now())
+            ->orderBy('published_at' ,'desc')
+            ->limit(30)
+            ->get();
+
+      return view('home.index', ['cars' => $cars]);
+
+           
+                         
+     }
+
+
+
+}
+ // // Select all Cars
       // $cars = Car::get();
 
 
@@ -133,18 +146,4 @@ class HomeController extends Controller
 
       //   dd($maker);
 
-      User::factory()->count(10)->create();
-
-
-
-
-      return view('home.index');
-
-      
-       return  View::make('home.index');
-                         
-     }
-
-
-
-}
+      // User::factory()->count(10)->create();

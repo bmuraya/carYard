@@ -2,13 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
+
 
 class Car extends Model
 {
@@ -24,7 +26,7 @@ class Car extends Model
         'car_type_id',
         'fuel_type_id',
         'user_id',
-        'Constituencies_id',
+        'constituency_id',
         'address',
         'phone',
         'description',
@@ -52,7 +54,7 @@ class Car extends Model
 
     public function model(): BelongsTo
     {
-        return $this->belongsTo(Model::class);
+        return $this->belongsTo(CarModel::class);
     }
 
 

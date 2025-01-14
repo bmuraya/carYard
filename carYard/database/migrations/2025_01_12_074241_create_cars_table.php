@@ -22,7 +22,7 @@ return new class extends Migration
             $table->foreignId('car_type_id')->constrained('car_types');
             $table->foreignId('fuel_type_id')->constrained('fuel_types');
             $table->foreignId('user_id')->constrained('users');
-            $table->foreignId('constituencies_id')->constrained('constituencies');
+            $table->foreignId('constituency_id')->constrained('constituencies');
             $table->string('address' , 255);
             $table->string('phone' , 45);
             $table->longText('description')->nullable();
