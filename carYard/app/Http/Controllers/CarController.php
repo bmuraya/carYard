@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Car;
+use App\Models\User;
 
 class CarController extends Controller
 {
@@ -12,7 +13,13 @@ class CarController extends Controller
      */
     public function index()
     {
-        return view('car.index');
+        $cars = User::find(1)
+            ->cars()
+            ->with(['primaryImage', 'maker', 'model'])
+            ->orderBy('created_at', 'desc')
+            ->paginate(15);
+
+        return view('car.index', ['cars' => $cars]);
     }
 
     /**
@@ -36,8 +43,8 @@ class CarController extends Controller
      */
     public function show(Car $car)
     {
-        
-        return view('car.show' ,[ 'car' => $car]);
+
+        return view('car.show', ['car' => $car]);
     }
 
     /**
@@ -65,19 +72,31 @@ class CarController extends Controller
     }
 
     public function search()
-    {  
-       $query= Car::where('published_at', '<' , now())
+    {
+        $query = Car::where('published_at', '<', now())
+            ->with(['primaryImage', 'constituency', 'carType', 'fuelType', 'maker', 'model'])
             ->orderBy('published_at', 'desc');
 
-            $carCount = $query->count();
-
-            $cars = $query->limit(30)->get();
-
+        // $query->join('constituencies', 'constituencies.id', '=', 'cars.constituency_id')
+        //     ->where('constituencies.county_id', 1);
 
 
-        return view('car.search', [
-            'cars' => $cars,
-            'carCount' => $carCount
-        ]);
-    }   
+        $cars = $query->paginate(15);
+
+
+        return view('car.search', ['cars' => $cars]);
+    }
+
+
+    public function watchlist()
+    {
+
+        $cars = User::find(4)
+            ->favouriteCars()
+            ->with(['primaryImage', 'constituency', 'carType', 'fuelType', 'maker', 'model'])
+            ->paginate(15);
+
+
+        return view('car.watchlist', ['cars' => $cars]);
+    }
 }

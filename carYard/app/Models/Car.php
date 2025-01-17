@@ -92,4 +92,9 @@ class Car extends Model
     {
         return $this ->belongsToMany(User::class , 'favourite_cars');
     }
+
+    public function getCreatedDate(): string 
+    {
+        return $this->created_at->format('d-m-Y');
+    }
 }   
